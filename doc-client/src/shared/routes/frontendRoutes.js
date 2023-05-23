@@ -40,6 +40,6 @@ export default [
     icon: <ServicesIcon />,
     showInMenu: true,
     hasChildren: false,
-    path: "Services",
+    path: "services",
   },
 ];
