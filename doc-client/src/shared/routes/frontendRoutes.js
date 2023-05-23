@@ -4,11 +4,13 @@ import HomeIcon from "@mui/icons-material/Home";
 import LoginIcon from "@mui/icons-material/Password";
 import ContactIcon from "@mui/icons-material/Contact";
 import AboutIcon from "@mui/icons-material/About";
+import ServicesIcon from "@mui/icons-material/Services";
 
 const HomePage = lazy(() => import("../../features/home/HomePage"));
 const LoginPage = lazy(() => import("../../features/login/LoginPage"));
 const ContactPage = lazy(() => import("../../features/contact/ContactPage"));
 const AboutPage = lazy(() => import("../../features/about/AboutPage"));
+const ServicesPage = lazy(() => import("../../features/services/ServicesPage"));
 
 export default [
   {
@@ -42,5 +44,13 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "about",
+  },
+  {
+    label: "Services",
+    component: <ServicesPage />,
+    icon: <ServicesIcon />,
+    showInMenu: true,
+    hasChildren: false,
+    path: "services",
   },
 ];
