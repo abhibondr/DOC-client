@@ -3,10 +3,12 @@ import React, { lazy } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import LoginIcon from "@mui/icons-material/Password";
 import ContactIcon from "@mui/icons-material/Contact";
+import AboutIcon from "@mui/icons-material/About";
 
 const HomePage = lazy(() => import("../../features/home/HomePage"));
 const LoginPage = lazy(() => import("../../features/login/LoginPage"));
 const ContactPage = lazy(() => import("../../features/contact/ContactPage"));
+const AboutPage = lazy(() => import("../../features/about/AboutPage"));
 
 export default [
   {
@@ -32,5 +34,13 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "contact",
+  },
+  {
+    label: "About",
+    component: <AboutPage />,
+    icon: <AboutIcon />,
+    showInMenu: true,
+    hasChildren: false,
+    path: "about",
   },
 ];
