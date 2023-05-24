@@ -8,10 +8,10 @@ import AboutIcon from "@mui/icons-material/MedicalInformation";
 import ServicesIcon from "@mui/icons-material/MedicalServices";
 
 const HomePage = lazy(() => import("../../features/home/HomePage"));
-const LoginPage = lazy(() => import("../../features/login/LoginPage"));
-const ContactPage = lazy(() => import("../../features/contact/ContactPage"));
 const AboutPage = lazy(() => import("../../features/about/AboutPage"));
 const ServicesPage = lazy(() => import("../../features/services/ServicesPage"));
+const ContactPage = lazy(() => import("../../features/contact/ContactPage"));
+const LoginPage = lazy(() => import("../../features/login/LoginPage"));
 
 export default [
   {
@@ -23,13 +23,23 @@ export default [
     path: "",
   },
   {
-    label: "Login",
-    component: <LoginPage />,
-    icon: <LoginIcon />,
+    label: "About",
+    component: <AboutPage />,
+    icon: <AboutIcon />,
     showInMenu: true,
     hasChildren: false,
-    path: "login",
+    path: "about",
   },
+
+  {
+    label: "Services",
+    component: <ServicesPage />,
+    icon: <ServicesIcon />,
+    showInMenu: true,
+    hasChildren: false,
+    path: "services",
+  },
+
   {
     label: "Contact",
     component: <ContactPage />,
@@ -38,20 +48,13 @@ export default [
     hasChildren: false,
     path: "contact",
   },
+
   {
-    label: "About",
-    component: <AboutPage />,
-    icon: <AboutIcon />,
+    label: "Login",
+    component: <LoginPage />,
+    icon: <LoginIcon />,
     showInMenu: true,
     hasChildren: false,
-    path: "about",
-  },
-  {
-    label: "Services",
-    component: <ServicesPage />,
-    icon: <ServicesIcon />,
-    showInMenu: true,
-    hasChildren: false,
-    path: "services",
+    path: "login",
   },
 ];
