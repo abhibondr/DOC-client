@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React, { lazy } from "react";
 
 import HomeIcon from "@mui/icons-material/Home";
