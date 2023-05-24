@@ -2,9 +2,9 @@ import React, { lazy } from "react";
 
 import HomeIcon from "@mui/icons-material/Home";
 import LoginIcon from "@mui/icons-material/Password";
-import ContactIcon from "@mui/icons-material/Contact";
-import AboutIcon from "@mui/icons-material/About";
-import ServicesIcon from "@mui/icons-material/Services";
+import ContactIcon from "@mui/icons-material/ContactPage";
+import AboutIcon from "@mui/icons-material/MedicalInformation";
+import ServicesIcon from "@mui/icons-material/MedicalServices";
 
 const HomePage = lazy(() => import("../../features/home/HomePage"));
 const LoginPage = lazy(() => import("../../features/login/LoginPage"));
