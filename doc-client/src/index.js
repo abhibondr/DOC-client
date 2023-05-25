@@ -4,13 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
-<<<<<<< HEAD
-import { Provider } from "react-redux";
-import store from "./app/store";
-=======
-import "react-toastify/dist/ReactToastify.css";
 
->>>>>>> 6704fe902787f69bad2929c298cb4128254d0319
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
