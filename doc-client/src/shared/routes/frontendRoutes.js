@@ -6,10 +6,12 @@ import LoginIcon from "@mui/icons-material/Password";
 import ContactIcon from "@mui/icons-material/ContactPage";
 import AboutIcon from "@mui/icons-material/MedicalInformation";
 import ServicesIcon from "@mui/icons-material/MedicalServices";
+import TestimonialIcon from "@mui/icons-material/Comment";
 
 const HomePage = lazy(() => import("../../features/home/HomePage"));
 const AboutPage = lazy(() => import("../../features/about/AboutPage"));
 const ServicesPage = lazy(() => import("../../features/services/ServicesPage"));
+const TestimonialPage = lazy(() => import("../../features/testimonial/TestimonialPage"));
 const ContactPage = lazy(() => import("../../features/contact/ContactPage"));
 const LoginPage = lazy(() => import("../../features/login/LoginPage"));
 
@@ -38,6 +40,14 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "services",
+  },
+  {
+    label: "Testimonial",
+    component: <TestimonialPage />,
+    icon: <TestimonialIcon />,
+    showInMenu: true,
+    hasChildren: false,
+    path: "testimonial",
   },
 
   {
