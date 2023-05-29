@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -14,6 +14,8 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import { useNavigate } from "react-router-dom";
+import AuthService from "../../services/AuthService";
+import { errorToast } from "../../ui/toast/Toast";
 
 function Copyright(props) {
   return (
@@ -40,11 +42,34 @@ const defaultTheme = createTheme();
 const LoginPage = () => {
   const navigate = useNavigate();
 
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value });
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    navigate("/secured");
-    //Navigate to Private Pages
+    AuthService.userLogin(user)
+      .then((response) => {
+        console.log("Response", response);
+
+        //Navigate to Private Pages
+        navigate("/secured");
+
+        //store token in sessionStorage
+      })
+      .catch((err) => {
+        console.error(err);
+        const message =
+          err?.response?.data?.message || "Could not login,try again!";
+        errorToast(message);
+      });
   };
 
   return (
@@ -99,6 +124,7 @@ const LoginPage = () => {
                 name="email"
                 autoComplete="email"
                 autoFocus
+                onChange={handleChange}
               />
               <TextField
                 margin="normal"
@@ -109,6 +135,7 @@ const LoginPage = () => {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                onChange={handleChange}
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
