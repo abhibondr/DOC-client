@@ -8,5 +8,8 @@ export default {
       getOne: "/users/",
       getAll: "/users",
     },
+    auth: {
+      userLogin: "/auth/login",
+    },
   },
 };

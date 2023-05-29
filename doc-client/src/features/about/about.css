@@ -1,0 +1,52 @@
+.about{
+    background-image: url('../Images/appointBg.png');
+    background-repeat: no-repeat;
+    height:420px;
+    background-position: center;
+    position: relative;
+    z-index:1;
+}
+.about::after{
+    position:absolute;
+    content:'';
+    top:0;
+    background: rgb(62, 139, 227);
+    display:block;
+    opacity: .6;
+    height:100%;
+    width:100%;
+    z-index: -1;
+    
+}
+.about img{
+    height:400px;
+}
+.parent{
+    position: relative;
+}
+.para{
+    position: absolute;
+    padding: 10px 20px;
+    top: 10px;
+    margin-left: 500px;
+}
+.btn{
+    padding: 4px 8px 5px 8px;
+    margin-left: 30px;
+}
+.btn:hover{
+background-color: rgb(209, 54, 72);
+color: #000;
+}
+h3{
+    margin-left: 40px;
+    color: #000;
+}
+h1{
+    margin-left: 40px;
+    color: #000;
+}
+p{
+color: #000;
+margin-left: 30px;
+}
