@@ -10,6 +10,9 @@ const authSlice = createSlice({
     removeUser: () => ({}),
   },
 });
+
 export const { addUser, removeUser } = authSlice.actions;
+
 export const selectAuth = (state) => state.loggedUser;
+
 export default authSlice.reducer;
