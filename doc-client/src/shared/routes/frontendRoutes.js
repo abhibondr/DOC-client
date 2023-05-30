@@ -3,6 +3,7 @@ import React, { lazy } from "react";
 
 import HomeIcon from "@mui/icons-material/Home";
 import LoginIcon from "@mui/icons-material/Password";
+import SignUpIcon from "@mui/icons-material/SignLanguage";
 import ContactIcon from "@mui/icons-material/ContactPage";
 import AboutIcon from "@mui/icons-material/MedicalInformation";
 import ServicesIcon from "@mui/icons-material/MedicalServices";
@@ -11,9 +12,12 @@ import TestimonialIcon from "@mui/icons-material/Comment";
 const HomePage = lazy(() => import("../../features/home/HomePage"));
 const AboutPage = lazy(() => import("../../features/about/AboutPage"));
 const ServicesPage = lazy(() => import("../../features/services/ServicesPage"));
-const TestimonialPage = lazy(() => import("../../features/testimonial/TestimonialPage"));
+const TestimonialPage = lazy(() =>
+  import("../../features/testimonial/TestimonialPage")
+);
 const ContactPage = lazy(() => import("../../features/contact/ContactPage"));
 const LoginPage = lazy(() => import("../../features/login/LoginPage"));
+const SignUp = lazy(() => import("../../layouts/blank/SignUp"));
 
 export default [
   {
@@ -66,5 +70,13 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "login",
+  },
+  {
+    label: "SignUp",
+    component: <SignUp />,
+    icon: <SignUpIcon />,
+    showInMenu: false,
+    hasChildren: false,
+    path: "signup",
   },
 ];
