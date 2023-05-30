@@ -14,8 +14,8 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import { useNavigate } from "react-router-dom";
-import AuthService from "../../services/AuthService";
-import { errorToast } from "../../ui/toast/Toast";
+import { errorToast, successToast } from "../../ui/toast/Toast";
+import userLogin from "../../services/AuthService";
 
 function Copyright(props) {
   return (
@@ -26,7 +26,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="/about">
         Doctors Appointment
       </Link>{" "}
       {new Date().getFullYear()}
@@ -55,14 +55,13 @@ const LoginPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    AuthService.userLogin(user)
+    userLogin(user)
       .then((response) => {
         console.log("Response", response);
 
         //Navigate to Private Pages
         navigate("/secured");
-
-        //store token in sessionStorage
+        successToast("login successful");
       })
       .catch((err) => {
         console.error(err);
@@ -156,7 +155,7 @@ const LoginPage = () => {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link href="/signup" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>
