@@ -32,17 +32,19 @@ const Header = () => {
             Doctors Appointment
           </Typography>
           {Array.isArray(frontendRoutes) &&
-            frontendRoutes?.map(({ path, label }, i) => (
-              <Link
-                key={path + i}
-                to={path}
-                style={({ isActive }) => ({
-                  color: isActive ? "#999" : "#fff",
-                })}
-              >
-                {label}
-              </Link>
-            ))}
+            frontendRoutes
+              ?.filter(({ showInMenu }) => showInMenu)
+              .map(({ path, label }, i) => (
+                <Link
+                  key={path + i}
+                  to={path}
+                  style={({ isActive }) => ({
+                    color: isActive ? "#999" : "#fff",
+                  })}
+                >
+                  {label}
+                </Link>
+              ))}
         </Toolbar>
       </AppBar>
     </Box>

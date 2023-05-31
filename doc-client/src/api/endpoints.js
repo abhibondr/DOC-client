@@ -1,5 +1,5 @@
 export default {
-  serverBaseURL: "http://localhost:6666/api",
+  serverBaseURL: "http://localhost:8080/api",
   api: {
     users: {
       create: "/users",
@@ -7,6 +7,9 @@ export default {
       delete: "/users/",
       getOne: "/users/",
       getAll: "/users",
+    },
+    auth: {
+      userLogin: "/auth/login",
     },
   },
 };
