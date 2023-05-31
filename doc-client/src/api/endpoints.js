@@ -10,6 +10,7 @@ export default {
     },
     auth: {
       userLogin: "/auth/login",
+      validateToken: "/auth/validate-token",
     },
   },
 };
