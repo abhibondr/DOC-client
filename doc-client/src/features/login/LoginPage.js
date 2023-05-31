@@ -15,7 +15,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import { useNavigate } from "react-router-dom";
 import { errorToast, successToast } from "../../ui/toast/Toast";
-import userLogin from "../../services/AuthService";
+import AuthService from "../../services/AuthService";
+import { useDispatch } from "react-redux";
+import { addUser } from "../../app/slice/AuthSlice";
 
 function Copyright(props) {
   return (
@@ -42,6 +44,8 @@ const defaultTheme = createTheme();
 const LoginPage = () => {
   const navigate = useNavigate();
 
+  const dispatch = useDispatch();
+
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -55,13 +59,19 @@ const LoginPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    userLogin(user)
+    AuthService.userLogin(user)
       .then((response) => {
         console.log("Response", response);
 
         //Navigate to Private Pages
         navigate("/secured");
         successToast("login successful");
+
+        //store token in sessionStorage
+        sessionStorage.setItem("token", response.headers["x-token"]);
+
+        //add the user to redux state
+        dispatch(addUser(response?.data?.data));
       })
       .catch((err) => {
         console.error(err);
