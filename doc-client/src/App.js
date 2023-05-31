@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import BlankLayout from "./layouts/blank/BlankLayout";
 import FullLayout from "./layouts/full/FullLayout";
 import { ToastContainer } from "react-toastify";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
