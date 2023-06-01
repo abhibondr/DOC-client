@@ -87,14 +87,6 @@ export default [
     path: "signup",
   },
   {
-<<<<<<< HEAD
-    label: "Footer",
-    component: <Footer />,
-
-    showInMenu: false,
-    hasChildren: false,
-    path: "Footer",
-=======
     label: "Forgot Password",
     component: <ForgotPassword />,
     icon: <LoginIcon />,
@@ -109,6 +101,5 @@ export default [
     showInMenu: false,
     hasChildren: false,
     path: "change-password",
->>>>>>> 06c0d8d304173a77c378d6ee3028faf378e040f3
   },
 ];
