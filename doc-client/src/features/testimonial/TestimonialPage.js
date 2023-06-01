@@ -10,20 +10,21 @@ const TestimonialPage = () => {
                     <div className="col-md-4 text-center">
                         <div className="profile">
                             <img src="https://cdn.shopify.com/s/files/1/1953/0533/files/dr.two-intro.png?v=1678111041" className="user" />
-                            <blockquote>Dr. Amit Kumar Jaiswal is one of the most famed Surgical Oncosurgeon.
+                            <blockquote>Dr. Disha Kumar Jaiswal is one of the most famed Surgical Oncosurgeon.
                                 He has a thriving experience of 21 years & has performed many successful Cancer surgeries till date.
                                 Dr. Amit Kumar Jaiswal has done his MBBS from Lokmanya Tilak Municipal Medical College, Mumbai, MS  from Lokmanya Tilak Municipal Medical College,
                                 Mumbai & DNB from  National Board of Examinations, New Delhi.
                             </blockquote>
-                            <h3>Dr. Disha Kumar Jaiswal <span>Aesthetics</span></h3>
+                            <h3>Dr. Disha Kumar Jaiswal <span>Surgical Oncosurgeon</span></h3>
                         </div>
                     </div>
                     <div className="col-md-4 text-center">
                         <div className="profile">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpUJOvKqn9T_LvJDd9GyGJFoXhECg12vG_MSBSsiakOJSGdgs4mUENppw---7mJwhRjNg&usqp=CAU" className="user" />
-                            <blockquote>Dr Y K Mishra is one of the renowned & most experienced cardiac surgeons in India.
+                            <blockquote>Dr. Y K Mishra is one of the renowned & most experienced cardiac surgeons in India.
                                 With an experience of over 32 years, he is widely recognised & has successfully performed over 14,000 open heart surgeries, & more than 500 robotic surgeries.
                                 In addition to his clinical work, he also has a keen interest in training, education &research work & has been invited as a guest lecturer from all around the world.
+
                             </blockquote>
                             <h3>Dr Y K Mishra <span>Cardiac Surgeon</span></h3>
                         </div>
