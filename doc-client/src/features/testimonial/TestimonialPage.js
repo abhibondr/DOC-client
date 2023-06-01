@@ -15,7 +15,7 @@ const TestimonialPage = () => {
                                 Dr. Amit Kumar Jaiswal has done his MBBS from Lokmanya Tilak Municipal Medical College, Mumbai, MS  from Lokmanya Tilak Municipal Medical College,
                                 Mumbai & DNB from  National Board of Examinations, New Delhi.
                             </blockquote>
-                            <h3>Dr. Amit Kumar Jaiswal <span>Aesthetics</span></h3>
+                            <h3>Dr. Disha Kumar Jaiswal <span>Aesthetics</span></h3>
                         </div>
                     </div>
                     <div className="col-md-4 text-center">

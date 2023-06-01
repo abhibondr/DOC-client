@@ -1,5 +1,5 @@
 export default {
-  serverBaseURL: "http://localhost:6666/api",
+  serverBaseURL: "http://localhost:9999/api",
   api: {
     users: {
       create: "/users",
@@ -10,6 +10,8 @@ export default {
     },
     auth: {
       userLogin: "/auth/login",
+      validateToken: "/auth/validate-token",
+      resetPassword: "/auth/reset-password",
     },
   },
 };
