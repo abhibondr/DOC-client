@@ -100,6 +100,6 @@ export default [
     icon: <LoginIcon />,
     showInMenu: false,
     hasChildren: false,
-    path: "change-password",
+    path: "change-password/:token",
   },
 ];
