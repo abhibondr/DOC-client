@@ -13,6 +13,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import AuthService from "../../../services/AuthService";
+import { errorToast, successToast } from "../../../ui/toast/Toast";
 
 function Copyright(props) {
   return (
@@ -41,18 +43,23 @@ const ForgotPassword = () => {
 
   const dispatch = useDispatch();
 
-  const [user, setUser] = useState({
-    email: "",
-  });
+  const [email, setEmail] = useState("");
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUser({ ...user, [name]: value });
+    const { value } = e.target;
+    setEmail(value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //send email to server
+    AuthService.resetPassword(email)
+      .then((response) => {
+        successToast("Email sent");
+      })
+      .catch((err) => {
+        console.error(err);
+        errorToast("could not sent");
+      });
   };
 
   return (
@@ -110,7 +117,7 @@ const ForgotPassword = () => {
                 label="Email"
                 type="email"
                 id="email"
-                onChange={handleChange}
+                onChange={(e) => setEmail(e.target.value)}
               />
 
               <Button
@@ -118,7 +125,7 @@ const ForgotPassword = () => {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                disabled={!user.email}
+                disabled={!email}
               >
                 Reset
               </Button>
