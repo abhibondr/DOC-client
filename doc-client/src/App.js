@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import BlankLayout from "./layouts/blank/BlankLayout";
 import FullLayout from "./layouts/full/FullLayout";
 import { ToastContainer } from "react-toastify";
+import Footer from "./features/footer/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/*" element={<BlankLayout />} />
         <Route path="secured/*" element={<FullLayout />} />
       </Routes>
+      <Footer />
     </>
   );
 }
