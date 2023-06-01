@@ -18,6 +18,12 @@ const TestimonialPage = lazy(() =>
 const ContactPage = lazy(() => import("../../features/contact/ContactPage"));
 const LoginPage = lazy(() => import("../../features/login/LoginPage"));
 const SignUp = lazy(() => import("../../layouts/blank/SignUp"));
+const ForgotPassword = lazy(() =>
+  import("../../features/password/forgot-password/ForgotPassword")
+);
+const ChangePassword = lazy(() =>
+  import("../../features/password/change-password/ChangePassword")
+);
 
 export default [
   {
@@ -78,5 +84,21 @@ export default [
     showInMenu: false,
     hasChildren: false,
     path: "signup",
+  },
+  {
+    label: "Forgot Password",
+    component: <ForgotPassword />,
+    icon: <LoginIcon />,
+    showInMenu: false,
+    hasChildren: false,
+    path: "forgot-password",
+  },
+  {
+    label: "Change Password",
+    component: <ChangePassword />,
+    icon: <LoginIcon />,
+    showInMenu: false,
+    hasChildren: false,
+    path: "change-password",
   },
 ];
