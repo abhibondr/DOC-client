@@ -1,8 +1,9 @@
 import React from "react";
+import SideBar from "./SideBar";
 const FullLayout = () => {
   return (
     <>
-      <h3>FullLayout Page</h3>
+      <SideBar />
     </>
   );
 };
