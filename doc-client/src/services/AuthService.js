@@ -10,5 +10,9 @@ const AuthService = {
     if (token) return API.post(endpoints?.api?.auth?.validateToken, { token });
     else return Promise.reject("Token not available");
   },
+
+  resetPassword(email) {
+    return API.post(endpoints?.api?.auth?.resetPassword, { email });
+  },
 };
 export default AuthService;
