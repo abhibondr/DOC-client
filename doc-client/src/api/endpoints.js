@@ -1,5 +1,5 @@
 export default {
-  serverBaseURL: "http://localhost:8080/api",
+  serverBaseURL: "http://localhost:9999/api",
   api: {
     users: {
       create: "/users",

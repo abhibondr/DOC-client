@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -11,8 +11,9 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import AuthService from "../../../services/AuthService";
 
 function Copyright(props) {
   return (
@@ -40,6 +41,24 @@ const ChangePassword = () => {
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
+
+  const { token } = useParams();
+
+  const [showForm, setShowForm] = useState(false);
+
+  useEffect(() => {
+    if (token)
+      AuthService.validateToken({ token })
+        .then((response) => {
+          console.log("valid token");
+          setShowForm(true);
+        })
+        .catch((err) => {
+          console.error(err);
+          console.log("invalid token");
+          setShowForm(false);
+        });
+  }, [token]);
 
   const [user, setUser] = useState({
     password: "",
