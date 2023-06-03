@@ -1,23 +1,28 @@
 import { Container, Grid, TableContainer, Typography } from "@mui/material";
 import React from "react";
 import "./Footer.css";
-
+import Facebook from "@mui/icons-material/Facebook";
+import Instagram from "@mui/icons-material/Instagram";
+import Twitter from "@mui/icons-material/Twitter";
+import Youtube from "@mui/icons-material/YouTube";
 const Footer = () => {
   return (
     <>
-      <Container className="parent">
+      <div style={{ backgroundColor: "gray" }} className="parent">
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4} lg={3}>
             <Typography variant="h3" sx={{ margin: "15px" }}>
               Doctor <br />
               Appointment
             </Typography>
-            <Typography variant="h6" sx={{ margin: "15px" }}>
-              <p>
-                Doctor Appointment is a registered start up company empanelled
-                with 20 plus doctors and 500 patients lives touched.
-              </p>
+            <Typography variant="body2" sx={{ margin: "15px" }}>
+              Doctor Appointment is a registered start up company empanelled
+              with 20 plus doctors and 500 patients lives touched.
             </Typography>
+            <Facebook fontSize="large" />
+            <Instagram fontSize="large" />
+            <Twitter fontSize="large" />
+            <Youtube fontSize="large" />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
             <Typography variant="h4" sx={{ margin: "15px" }}>
@@ -70,7 +75,7 @@ const Footer = () => {
             </Typography>
           </Grid>
         </Grid>
-      </Container>
+      </div>
     </>
   );
 };
