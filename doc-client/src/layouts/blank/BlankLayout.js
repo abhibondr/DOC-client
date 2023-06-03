@@ -7,9 +7,9 @@ import Header from "./Header";
 import Allergists from "../../features/home/home-links/Allergists";
 import Anesthesiologists from "../../features/home/home-links/Anesthesiologists";
 import Cardiologists from "../../features/home/home-links/Cardiologists";
-import Obstetricians from "../../features/home/home-links/Obstetricians";
-import PlasticSurgeons from "../../features/home/home-links/PlasticSurgeons";
-import Preventive from "../../features/home/home-links/Preventive";
+import NeurologicalSurgeon from "../../features/home/home-links/PlasticSurgeons";
+import Dermatologist from "../../features/home/home-links/Dermatologist";
+import EmergencyMedicine from "../../features/home/home-links/EmergencyMedicine";
 
 const BlankLayout = () => {
   return (
@@ -31,14 +31,11 @@ const BlankLayout = () => {
           <Route path="/Anesthesiologists" element={<Anesthesiologists />} />
           <Route path="/Cardiologists" element={<Cardiologists />} />
           <Route
-            path="/Obstetricians and Gynecologists"
-            element={<Obstetricians />}
+            path="/NeurologicalSurgeon"
+            element={<NeurologicalSurgeon />}
           />
-          <Route path="/Plastic Surgeons" element={<PlasticSurgeons />} />
-          <Route
-            path="/Preventive Medicine Specialists"
-            element={<Preventive />}
-          />
+          <Route path="/Dermatologist" element={<Dermatologist />} />
+          <Route path="/Emergency Medicine" element={<EmergencyMedicine />} />
         </Routes>
       </Suspense>
     </>
