@@ -96,7 +96,6 @@ const HomePage = () => {
                 <Card.Text>
                   Complete range of medical equipments and Laboratory services.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
               </Card.Body>
             </Card>
           </Grid>
@@ -112,7 +111,6 @@ const HomePage = () => {
                 <Card.Text>
                   Video Consultation and Home visits are available on demand.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
               </Card.Body>
             </Card>
           </Grid>
@@ -129,7 +127,6 @@ const HomePage = () => {
                 <Card.Text>
                   With the capacity to provide ICU facilities and expert care.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
               </Card.Body>
             </Card>
           </Grid>
@@ -213,28 +210,10 @@ const HomePage = () => {
             >
               <Item elevation={2}>
                 <Link
-                  to={"/Obstetricians and Gynecologists"}
+                  to={"/NeurologicalSurgeon"}
                   style={{ textDecoration: "none" }}
                 >
-                  Obstetricians and Gynecologists
-                </Link>
-              </Item>
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={4} sm={6}>
-            <Box
-              sx={{
-                p: 2,
-
-                gap: 2,
-              }}
-            >
-              <Item elevation={2}>
-                <Link
-                  to={"/Plastic Surgeons"}
-                  style={{ textDecoration: "none" }}
-                >
-                  Plastic Surgeons
+                  Neurological Surgeon
                 </Link>
               </Item>
             </Box>
@@ -249,15 +228,33 @@ const HomePage = () => {
               }}
             >
               <Item elevation={2}>
-                <Link
-                  to={"/Preventive Medicine Specialists"}
-                  style={{ textDecoration: "none" }}
-                >
-                  Preventive Medicine Specialists
+                <Link to={"/Dermatologist"} style={{ textDecoration: "none" }}>
+                  Dermatologists
                 </Link>
               </Item>
             </Box>
           </Grid>
+
+          <Grid item xs={12} md={4} sm={6}>
+            <Box
+              sx={{
+                p: 2,
+
+                gap: 2,
+              }}
+            >
+              <Item elevation={2}>
+                <Link
+                  to={"/Emergency Medicine"}
+                  style={{ textDecoration: "none" }}
+                >
+                  Emergency Medicine
+                </Link>
+              </Item>
+            </Box>
+          </Grid>
+
+          {/* footer */}
         </Grid>
       </Container>{" "}
     </>
