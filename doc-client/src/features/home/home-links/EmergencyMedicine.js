@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Box, Container, Grid, Paper, TextField } from "@mui/material";
 
-const Allergists = () => {
+const EmergencyMedicine = () => {
   return (
     <>
       <Container>
@@ -21,7 +21,7 @@ const Allergists = () => {
             >
               <CardMedia
                 sx={{ width: 400, height: 300 }}
-                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgVvAEFhAgxJ-J8DZU9TBt2ZjBb3GAsFotNQ&usqp=CAU"
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpbGcHOOvXl-A79cYObNZLR4Aq1-sEUBMuow&usqp=CAU"
                 title="green iguana"
               />
             </Card>
@@ -37,7 +37,7 @@ const Allergists = () => {
               }}
             >
               <Typography variant="h3" sx={{ color: "#3d565d", fontSize: 40 }}>
-                Allergists-Immunologist
+                Emergency Medicine
               </Typography>
               <Typography
                 variant="body1"
@@ -49,14 +49,14 @@ const Allergists = () => {
                   color: "#364343",
                 }}
               >
-                An allergist-immunologist is trained in evaluation, physical and
-                laboratory diagnosis, and management of disorders involving the
-                immune system. Selected examples of such conditions include
-                asthma, anaphylaxis, rhinitis, eczema, and adverse reactions to
-                drugs, foods, and insect stings as well as immune deficiency
-                diseases (both acquired and congenital), defects in host
-                defense, and problems Related to autoimmune disease, organ
-                transplantation, or malignancies of the immune system.
+                An emergency physician focuses on the immediate decision making
+                and action necessary to prevent death or any further disability
+                both in the pre-hospital setting by directing emergency medical
+                technicians and in the emergency department. The emergency
+                physician provides immediate recognition, evaluation, care,
+                stabilization and disposition of a generally diversified
+                population of adult and pediatric patients in response to acute
+                illness and injury.
               </Typography>
             </Box>
           </Grid>
@@ -66,4 +66,4 @@ const Allergists = () => {
   );
 };
 
-export default Allergists;
+export default EmergencyMedicine;

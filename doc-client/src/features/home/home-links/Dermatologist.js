@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Box, Container, Grid, Paper, TextField } from "@mui/material";
 
-const Allergists = () => {
+const Dermatologist = () => {
   return (
     <>
       <Container>
@@ -21,7 +21,7 @@ const Allergists = () => {
             >
               <CardMedia
                 sx={{ width: 400, height: 300 }}
-                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgVvAEFhAgxJ-J8DZU9TBt2ZjBb3GAsFotNQ&usqp=CAU"
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl-ms7M1IGz9MwUo1V6_MaYyVKN0KHGFqOiA&usqp=CAU"
                 title="green iguana"
               />
             </Card>
@@ -37,7 +37,7 @@ const Allergists = () => {
               }}
             >
               <Typography variant="h3" sx={{ color: "#3d565d", fontSize: 40 }}>
-                Allergists-Immunologist
+                Dermatologist
               </Typography>
               <Typography
                 variant="body1"
@@ -49,14 +49,12 @@ const Allergists = () => {
                   color: "#364343",
                 }}
               >
-                An allergist-immunologist is trained in evaluation, physical and
-                laboratory diagnosis, and management of disorders involving the
-                immune system. Selected examples of such conditions include
-                asthma, anaphylaxis, rhinitis, eczema, and adverse reactions to
-                drugs, foods, and insect stings as well as immune deficiency
-                diseases (both acquired and congenital), defects in host
-                defense, and problems Related to autoimmune disease, organ
-                transplantation, or malignancies of the immune system.
+                All dermatologists are medical doctors, with additional
+                specialty training. Dermatologists diagnose and treat skin
+                cancers, melanomas, moles and other tumors. They care for the
+                mucous linings of the mouth, nose and eyes. They are trained to
+                recognize how other diseases – like heart or kidney problems –
+                might manifest themselves in and through a patient’s skin.
               </Typography>
             </Box>
           </Grid>
@@ -66,4 +64,4 @@ const Allergists = () => {
   );
 };
 
-export default Allergists;
+export default Dermatologist;
