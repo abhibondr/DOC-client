@@ -71,7 +71,7 @@ const Footer = () => {
               - Customer Support: poonam123@gmail.com
             </Typography>
             <Typography variant="h6" sx={{ margin: "15px" }}>
-              - Official Queries: abhi@gmail.com
+              - Official Queries: abhi123@gmail.com
             </Typography>
           </Grid>
         </Grid>
