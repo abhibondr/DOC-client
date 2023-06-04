@@ -8,6 +8,7 @@ import ContactIcon from "@mui/icons-material/ContactPage";
 import AboutIcon from "@mui/icons-material/MedicalInformation";
 import ServicesIcon from "@mui/icons-material/MedicalServices";
 import TestimonialIcon from "@mui/icons-material/Comment";
+import Footer from "../../features/footer/Footer";
 
 const HomePage = lazy(() => import("../../features/home/HomePage"));
 const AboutPage = lazy(() => import("../../features/about/AboutPage"));
