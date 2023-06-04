@@ -138,6 +138,16 @@ const ChangePassword = () => {
                 id="cpassword"
                 autoComplete="confirm-password"
                 onChange={handleChange}
+                error={
+                  user?.password && user?.password != user?.cpassword
+                    ? true
+                    : false
+                }
+                helperText={
+                  user?.password &&
+                  user?.password != user?.cpassword &&
+                  "Password and confirm password did not match"
+                }
               />
 
               <Button
@@ -145,6 +155,7 @@ const ChangePassword = () => {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                disabled={!user?.password || user?.password != user?.cpassword}
               >
                 Change
               </Button>

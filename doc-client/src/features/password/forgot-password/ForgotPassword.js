@@ -73,7 +73,7 @@ const ForgotPassword = () => {
           md={7}
           sx={{
             backgroundImage:
-              "url(https://ibpf.org/wp-content/uploads/2016/09/doctors-appointment-mental-health.png)",
+              "url(https://as2.ftcdn.net/v2/jpg/05/99/22/21/1000_F_599222160_4PWaUvPOZGSxc109WBZsk9ySH0z0AZkC.jpg)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
