@@ -10,6 +10,7 @@ import Cardiologists from "../../features/home/home-links/Cardiologists";
 import NeurologicalSurgeon from "../../features/home/home-links/PlasticSurgeons";
 import Dermatologist from "../../features/home/home-links/Dermatologist";
 import EmergencyMedicine from "../../features/home/home-links/EmergencyMedicine";
+import Footer from "../../features/footer/Footer";
 
 const BlankLayout = () => {
   return (
@@ -38,6 +39,7 @@ const BlankLayout = () => {
           <Route path="/Emergency Medicine" element={<EmergencyMedicine />} />
         </Routes>
       </Suspense>
+      <Footer />
     </>
   );
 };
