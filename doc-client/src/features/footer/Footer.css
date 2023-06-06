@@ -1,7 +1,10 @@
 .parent {
   background-color: rgb(77, 77, 80);
-  margin-top: 20%;
+  /* margin-top: 100%; */
+  position: relative;
+  bottom: 0;
 }
+
 variant {
   color: white;
 }

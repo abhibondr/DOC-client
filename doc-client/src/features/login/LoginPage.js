@@ -92,7 +92,7 @@ const LoginPage = () => {
           md={7}
           sx={{
             backgroundImage:
-              "url(https://ibpf.org/wp-content/uploads/2016/09/doctors-appointment-mental-health.png)",
+              "url(https://as2.ftcdn.net/v2/jpg/02/65/95/81/1000_F_265958166_YTEL6wHpfxnPlN9nNYxL7UKHiOWCln59.jpg)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
