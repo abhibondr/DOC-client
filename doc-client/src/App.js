@@ -9,7 +9,6 @@ import { removeUser, selectAuth } from "./app/slice/AuthSlice";
 import { Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import AuthService from "./services/AuthService";
-import Footer from "./features/footer/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -52,7 +51,6 @@ function App() {
           }
         />
       </Routes>
-      <Footer />
     </>
   );
 }

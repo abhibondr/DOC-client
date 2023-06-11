@@ -1,61 +1,28 @@
-.about{
-    background-image: url('../Images/appointBg.png');
-    background-repeat: no-repeat;
-    height:100vh;
-    background-position: center;
-    position: relative;
-    z-index:1;
+.appointment {
+  background-image: url("../Images/appointBg.png");
+  background-repeat: no-repeat;
+  height: 420px;
+  background-position: center;
+  position: relative;
+  z-index: 1;
 }
-.about::after{
-    position:absolute;
-    content:'';
-    top:0;
-    background: rgb(62, 139, 227);
-    display:block;
-    opacity: .6;
-    height:100vh;
-    width:100vw;
-    z-index: -1;
-    
+.appointment::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  background: #242949;
+  display: block;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
-.phase-1{
-    font-size: 20px;
-    font-family: cursive;
+.appointment img {
+  height: 550px;
+  transform: translateY(-129px);
 }
-.about img{
-    height:450px;
-    width: 500px;
-}
-.parent{
-    position: relative;
-}
-.para{
-    position: absolute;
-    padding: 10px 20px;
-    top: 10px;
-    margin-left: 500px;
-}
-.btn{
-    padding: 10px 15px 10px 15px;
-    margin-left: 30px;
-}
-.btn:hover{
-background-color: rgb(25, 136, 227);
-color: #000;
-}
-h3{
-    margin-left: 40px;
-    color: #000;
-    font-weight: bold;
-}
-h1{
-    margin-left: 40px;
-    color: #000;
-    font-variant: small-caps;
-}
-p{
-color: #000;
-margin-left: 30px;
-font-size: 20px;
-font-family: cursive;
+
+.my-4 {
+  margin-top: 9.2rem !important;
+  margin-bottom: 7.5rem !important;
 }
