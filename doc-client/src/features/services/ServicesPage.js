@@ -29,7 +29,7 @@ const ServicesPage = () => {
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <div className="service_box pointer">
-              <div className="service_meta">
+              <div className="service_meta grid">
                 <h1 className="service_text">
                   <b>General Practice</b>
                 </h1>
@@ -46,7 +46,7 @@ const ServicesPage = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <div className="service_box pointer">
-              <div className="service_meta">
+              <div className="service_meta grid">
                 <h1 className="service_text">
                   <b>Specialist</b>
                 </h1>
@@ -62,7 +62,7 @@ const ServicesPage = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <div className="service_box pointer">
-              <div className="service_meta">
+              <div className="service_meta grid">
                 <h1 className="service_text">
                   <b>Dentist</b>
                 </h1>
@@ -78,7 +78,7 @@ const ServicesPage = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <div className="service_box pointer">
-              <div className="service_meta">
+              <div className="service_meta grid">
                 <h1 className="service_text">
                   <b>Medical Emergency</b>
                 </h1>

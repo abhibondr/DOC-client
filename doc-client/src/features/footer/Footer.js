@@ -17,9 +17,8 @@ const Footer = () => {
               Appointment
             </Typography>
             <Typography variant="body2" marginLeft="20px">
-              Doctor Appointment is a registered start up company
-              <br /> empanelled with 20 plus doctors and 500 patients lives
-              touched.
+              Doctor Appointment is a registered start up company empanelled
+              with 20 plus doctors and 500 patients lives touched.
             </Typography>
             <Typography marginLeft="20px">
               <Facebook fontSize="small" />
@@ -33,12 +32,7 @@ const Footer = () => {
               For Information
             </Typography>
             <Typography variant="body2" marginLeft="20px">
-              <Link
-                style={{ textDecoration: "none", color: "white" }}
-                to="/about"
-              >
-                - About Us
-              </Link>
+              - About Us
             </Typography>
 
             <Typography variant="body2" marginLeft="20px">
@@ -66,12 +60,7 @@ const Footer = () => {
             </Typography>
 
             <Typography variant="body2" marginLeft="20px">
-              <Link
-                to="/services"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                - Services
-              </Link>
+              - Services
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
