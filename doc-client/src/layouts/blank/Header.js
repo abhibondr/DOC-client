@@ -11,6 +11,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MonitorHeartIcon from "@mui/icons-material/MonitorHeart";
+import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 // import Button from "@mui/material/Button";
@@ -68,9 +69,14 @@ const Header = (props) => {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: "block" } }}
           >
-            <MonitorHeartIcon sx={{ fontSize: 55 }} />
+            <MenuIcon sx={{ display: { md: "none" }, fontSize: 55 }} />
           </IconButton>
-
+          <MonitorHeartIcon
+            sx={{
+              fontSize: 55,
+              display: { md: "block", xs: "none", marginRight: "5px" },
+            }}
+          />
           <Typography
             variant="h6"
             component="div"

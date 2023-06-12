@@ -1,4 +1,10 @@
 .parent {
+  background-color: rgb(77, 77, 80);
+  /* margin-top: 270%; */
+  width: 100%;
+}
+.children {
+  width: 100%;
   background-color: rgb(74, 74, 159);
   margin-top: 15%;
   color: whitesmoke;

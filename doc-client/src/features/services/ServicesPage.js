@@ -5,6 +5,7 @@ import specialist from "../Images/specialist.jpg";
 import dentist from "../Images/dentist.jpg";
 import time from "../Images/time.jpg";
 import { Grid } from "@mui/material";
+import Footer from "../footer/Footer";
 
 const ServicesPage = () => {
   return (
@@ -95,6 +96,7 @@ const ServicesPage = () => {
           </Grid>
         </Grid>
       </div>
+      <Footer />
     </div>
   );
 };

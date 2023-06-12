@@ -1,5 +1,8 @@
 import React from "react";
 import "./Testimonial.css";
+import Carousel from "react-bootstrap/Carousel";
+
+import Footer from "../footer/Footer";
 const TestimonialPage = () => {
   return (
     <section className="testimonials">
@@ -72,7 +75,52 @@ const TestimonialPage = () => {
             </div>
           </div>
         </div>
+
+        <Carousel>
+          <Carousel.Item interval={1000}>
+            <img
+              className="d-flex w-20   img-fluid"
+              src="https://nividous.com/wp-content/uploads/2022/05/how-automation-significantly-improves-patient-scheduling-nividous-1024x446.jpg"
+              alt="First slide"
+            />
+
+            <Carousel.Caption className="caption">
+              <h3>View Doctors, Book an Appointment</h3>
+              <p>
+                Find the best doctors,clinics & hospitals in the nearest to you.
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={1000}>
+            <img
+              className="d-flex w-20 carItem"
+              src="https://t3.ftcdn.net/jpg/02/38/73/06/240_F_238730671_D7HoHQrLIJSJk5RpfrO8SWy29UGa2ER6.jpg"
+              alt="Second slide"
+            />
+
+            <Carousel.Caption className="caption">
+              <h3>View Doctors, Book an Appointment</h3>
+              <p>
+                Find the best doctors,clinics & hospitals in the nearest to you.
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={3000} className="vid">
+            <img
+              className="d-flex w-20 carItem"
+              src="https://t3.ftcdn.net/jpg/02/38/73/06/240_F_238730671_D7HoHQrLIJSJk5RpfrO8SWy29UGa2ER6.jpg"
+              alt="Second slide"
+            />
+            <Carousel.Caption className="caption">
+              <h3>View Doctors, Book an Appointment</h3>
+              <p>
+                Find the best doctors,clinics & hospitals in the nearest to you.
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
       </div>
+      <Footer />
     </section>
   );
 };
