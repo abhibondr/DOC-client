@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../../app/slice/AuthSlice";
 import { successToast } from "../../ui/toast/Toast";
 import QueryService from "../../services/QueryService";
+import Footer from "../footer/Footer";
 import("./Contact.css");
 
 const ContactPage = () => {
