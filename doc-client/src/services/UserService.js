@@ -17,8 +17,8 @@ const UserService = {
     return API.get(endpoints?.api?.users?.getOne + id);
   },
 
-  getAllUsers(query) {
-    return API.get(endpoints?.api?.users?.getAll + query);
+  getAllUsers() {
+    return API.get(endpoints?.api?.users?.getAll);
   },
 };
 
