@@ -1,10 +1,8 @@
 .parent {
   background-color: rgb(77, 77, 80);
-  /* margin-top: 100%; */
-  position: relative;
-  bottom: 0;
+  /* margin-top: 270%; */
+  width: 100%;
 }
-
-variant {
-  color: white;
+.children {
+  width: 100%;
 }
