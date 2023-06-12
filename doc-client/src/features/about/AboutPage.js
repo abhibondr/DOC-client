@@ -1,11 +1,12 @@
 import React from "react";
 import doctor from "../Images/doctor.png";
 import "./about.css";
-import { Link, useNavigate } from "react-router-dom";
-import Container from "@mui/material/Container";
-import { Box, Grid, Typography, Paper } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { NavLink } from "react-router-dom";
+import Footer from "../footer/Footer";
+import HomeLink from "../home-links/HomeLink";
 
 const Appointment = () => {
   const Item = styled(Paper)(({ theme }) => ({
@@ -64,15 +65,9 @@ const Appointment = () => {
             </button>
           </div>
         </div>
-        <div className="row">
-          <Box sx={{ textAlign: "center" }}>
-            <Typography variant="h4">Specialties</Typography>
-            <Typography variant="subtitle1">
-              Find the right provider for you.
-            </Typography>
-          </Box>
-        </div>
       </div>
+      <HomeLink />
+      <Footer />
     </div>
   );
 };

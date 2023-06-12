@@ -4,7 +4,6 @@ import frontendRoutes from "../../shared/routes/frontendRoutes";
 import { Routes, Route } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import Header from "./Header";
-import Footer from "../../features/footer/Footer";
 
 const BlankLayout = () => {
   return (
@@ -21,7 +20,6 @@ const BlankLayout = () => {
               />
             ))}
         </Routes>
-        <Footer />
       </Suspense>
     </>
   );

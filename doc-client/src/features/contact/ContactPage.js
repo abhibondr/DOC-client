@@ -83,6 +83,7 @@ const ContactPage = () => {
           alt=""
         />
       </div>
+      <Footer />
     </div>
   );
 };

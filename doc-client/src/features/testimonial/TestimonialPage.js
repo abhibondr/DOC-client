@@ -1,5 +1,8 @@
 import React from "react";
 import "./Testimonial.css";
+import Carousel from "react-bootstrap/Carousel";
+
+import Footer from "../footer/Footer";
 const TestimonialPage = () => {
   return (
     <section className="testimonials">
@@ -73,6 +76,7 @@ const TestimonialPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 };
