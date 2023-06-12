@@ -4,6 +4,7 @@ import general from "../Images/general.png";
 import specialist from "../Images/specialist.jpg";
 import dentist from "../Images/dentist.jpg";
 import time from "../Images/time.jpg";
+import { Grid } from "@mui/material";
 import Footer from "../footer/Footer";
 
 const ServicesPage = () => {
@@ -12,7 +13,7 @@ const ServicesPage = () => {
       <div className="heading">
         <h1 className="heading">Hospital Services</h1>
         <p className="heading P_color">
-          <b>Best Care & Best Doctor</b>
+          <b style={{ fontSize: 22 }}>Best Care & Best Doctor</b>
         </p>
         <p className="heading P_color">
           Our Clinic open for you 24/7 and 7days in week,
@@ -25,82 +26,75 @@ const ServicesPage = () => {
         </p>
       </div>
       <div className="container">
-        <div className="row">
-          <div className="col_3">
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
             <div className="service_box pointer">
               <div className="service_meta">
                 <h1 className="service_text">
                   <b>General Practice</b>
                 </h1>
                 <p className="p service_text p_color">
-                  We Treat all common medical conditions and refer
-                </p>
-                <p className="p service_text p_color">
-                  patient to Hospitals and other medical services for
-                </p>
-                <p className="p service_text p_color">
-                  urgent and specialist treatment.
+                  We Treat all common medical
+                  <br /> conditions and refer patient to Hospitals <br />
+                  and other medical services for urgent <br />
+                  and specialist treatment.
                   <br />
-                  <img src={general} alt="" />
                 </p>
+                <img src={general} alt="" />
               </div>
             </div>
-          </div>
-          <div className="col_3">
+          </Grid>
+          <Grid item xs={12} md={6}>
             <div className="service_box pointer">
               <div className="service_meta">
                 <h1 className="service_text">
                   <b>Specialist</b>
                 </h1>
                 <p className="p service_text p_color">
-                  We all speciallised in,Orthopedic surgeon,
-                </p>
-                <p className="p service_text p_color">
-                  Neurology, Cardiology, Pathology, Plastic Surgeon
-                </p>
-                <p className="p service_text p_color">
-                  etc.
+                  We all speciallised in,Orthopedic
+                  <br /> surgeon, Neurology, Cardiology,
+                  <br /> Pathology, Plastic Surgeon etc.
                   <br />
-                  <img src={specialist} alt="" />
                 </p>
+                <img src={specialist} alt="" />
               </div>
             </div>
-          </div>
-          <div className="col_3">
+          </Grid>
+          <Grid item xs={12} md={6}>
             <div className="service_box pointer">
               <div className="service_meta">
                 <h1 className="service_text">
                   <b>Dentist</b>
                 </h1>
                 <p className="p service_text p_color">
-                  We provide good care of teeth and gums can
-                </p>
-                <p className="p service_text p_color">
-                  help you reduce your risk for other serious
-                </p>
-                <p className="p service_text p_color">
-                  health conditions.
+                  We provide good care of teeth and
+                  <br /> gums can help you to reduce risk for
+                  <br /> other serious health conditions.
                   <br />
-                  <img src={dentist} alt="" />
                 </p>
+                <img src={dentist} alt="" />
               </div>
             </div>
-          </div>
-          <div className="col_3">
+          </Grid>
+          <Grid item xs={12} md={6}>
             <div className="service_box pointer">
               <div className="service_meta">
                 <h1 className="service_text">
-                  <b>Service</b>
+                  <b>Medical Emergency</b>
                 </h1>
                 <p className="p service_text p_color">
-                  24/7 Emergency care center.
+                  24/7 Emergency care center, we
+                  <br /> provide ambulance services all
                   <br />
-                  <img src={time} alt="" />
+                  time.Provide urgent pre-hospital
+                  <br /> treatment.
+                  <br />
                 </p>
+                <img src={time} alt="" />
               </div>
             </div>
-          </div>
-        </div>
+          </Grid>
+        </Grid>
       </div>
       <Footer />
     </div>

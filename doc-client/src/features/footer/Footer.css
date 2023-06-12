@@ -5,4 +5,9 @@
 }
 .children {
   width: 100%;
+  background-color: rgb(74, 74, 159);
+  margin-top: 15%;
+  color: whitesmoke;
+
+  /* height: 200px; */
 }
