@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../footer/Footer";
 import("./Contact.css");
 const ContactPage = () => {
   return (
@@ -35,6 +36,7 @@ const ContactPage = () => {
           alt=""
         />
       </div>
+      <Footer />
     </div>
   );
 };
