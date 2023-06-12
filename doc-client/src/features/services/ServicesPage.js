@@ -4,6 +4,7 @@ import general from "../Images/general.png";
 import specialist from "../Images/specialist.jpg";
 import dentist from "../Images/dentist.jpg";
 import time from "../Images/time.jpg";
+import Footer from "../footer/Footer";
 
 const ServicesPage = () => {
   return (
@@ -101,6 +102,7 @@ const ServicesPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
