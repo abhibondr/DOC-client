@@ -13,6 +13,11 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import UserService from "../../services/UserService";
+import { useDispatch } from "react-redux";
+import { addUser } from "../../app/slice/AuthSlice";
+import { successToast } from "../../ui/toast/Toast";
+import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -37,13 +42,28 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 const SignUp = () => {
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
+  const [user, setUser] = React.useState();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value });
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    UserService.createUser(user)
+      .then((response) => {
+        dispatch(addUser(response?.data));
+        successToast("User Created...");
+        navigate("/login");
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   return (
@@ -75,12 +95,13 @@ const SignUp = () => {
                 <Grid item xs={12} sm={6}>
                   <TextField
                     autoComplete="given-name"
-                    name="firstName"
+                    name="name.first"
                     required
                     fullWidth
                     id="firstName"
                     label="First Name"
                     autoFocus
+                    onChange={handleChange}
                   />
                 </Grid>
                 <Grid item xs={12} sm={6}>
@@ -89,8 +110,20 @@ const SignUp = () => {
                     fullWidth
                     id="lastName"
                     label="Last Name"
-                    name="lastName"
+                    name="name.last"
                     autoComplete="family-name"
+                    onChange={handleChange}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="mobile"
+                    label="Mobile"
+                    name="mobile"
+                    autoComplete="mobile"
+                    onChange={handleChange}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -101,6 +134,7 @@ const SignUp = () => {
                     label="Email Address"
                     name="email"
                     autoComplete="email"
+                    onChange={handleChange}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -112,6 +146,7 @@ const SignUp = () => {
                     type="password"
                     id="password"
                     autoComplete="new-password"
+                    onChange={handleChange}
                   />
                 </Grid>
                 <Grid item xs={12}>

@@ -1,9 +1,10 @@
-/* eslint-disable import/no-anonymous-default-export */
 import React, { lazy } from "react";
 
 import MedicalInformationIcon from "@mui/icons-material/MedicalInformation";
 import MedicationLiquidIcon from "@mui/icons-material/MedicationLiquid";
 import AccessibleIcon from "@mui/icons-material/Accessible";
+import EnquiryIcon from "@mui/icons-material/EnergySavingsLeaf";
+
 import ApplyDoctorIcon from "@mui/icons-material/PersonAddAlt1";
 // import BookAppointment from "../../features/private/book-appointment/BookAppointment";
 const Appointments = lazy(() =>
@@ -11,6 +12,7 @@ const Appointments = lazy(() =>
 );
 const Doctors = lazy(() => import("../../features/private/doctors/Doctors"));
 const Patients = lazy(() => import("../../features/private/patients/Patients"));
+const Enquiry = lazy(() => import("../../features/private/enquiry/Enquiry"));
 const ApplyDoctor = lazy(() =>
   import("../../features/private/apply-doctor/ApplyDoctor")
 );
@@ -52,6 +54,14 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "patients",
+  },
+  {
+    label: "Enquiry",
+    component: <Enquiry />,
+    icon: <EnquiryIcon />,
+    showInMenu: true,
+    hasChildren: false,
+    path: "enquiry",
   },
   {
     component: <BookAppointment />,

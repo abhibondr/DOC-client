@@ -1,262 +1,119 @@
 import React from "react";
-import "./homepage.css";
-// import { Container } from "@mui/material";
-import Input from "@mui/material/Input";
-import Search from "@mui/icons-material/Search";
-// import img from "../../../public/"
-import image from "./home.jpg";
-import {
-  Box,
-  Container,
-  Divider,
-  Grid,
-  Paper,
-  TextField,
-  Typography,
-} from "@mui/material";
 import Carousel from "react-bootstrap/Carousel";
-import Button from "react-bootstrap/Button";
+import { Container, Divider, Grid } from "@mui/material";
 import Card from "react-bootstrap/Card";
-import { styled } from "@mui/material/styles";
-import { NavLink } from "react-router-dom";
+import Footer from "../footer/Footer";
+import "./homepage.css";
 
 const HomePage = () => {
-  const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    textAlign: "center",
-    color: "black",
-    height: 60,
-    lineHeight: "60px",
-    border: "1px solid black",
-
-    "&:hover": {
-      backgroundColor: "#4d2822",
-      color: "white",
-
-      fontSize: 16,
-    },
-  }));
-
-  const Link = styled(NavLink)({
-    textDecoration: "none",
-    "&:hover": {
-      color: "white",
-      cursor: "pointer",
-      fontSize: 16,
-    },
-  });
-
   return (
     <>
-      {/* <Container > */}
-      <div style={{ position: "relative" }}>
-        <img
-          // src="https://assets.lybrate.com/q_auto,f_auto,h_400,w_700,g_auto,c_fill/eagle/uploads/cca97c80d89ae5468547088748abbee7/48780e.jpg"
-          // src="../../../public/home.jpeg"
-          // src="./home.jpg"
-          src={image}
-          // className="img-fluid"
-          className="img-thumbnail"
-          style={{ width: "100%", height: 700 }}
-          alt="imagedcfdf"
-        />
-
-        <div className="backgroud-text">
-          View Doctors, Book an Appointment
-          <br />
-          <span className="backgroud-text-para">
-            Find the best doctors,clinics & hospitals in the nearest to you.
-          </span>
-          <br />
-          <Box m={3}>
-            <TextField
-              color="primary"
-              placeholder="search"
-              variant="outlined"
-              size="small"
-              autoFocus
+      <div className="position-relative">
+        <Carousel>
+          <Carousel.Item interval={1000}>
+            <img
+              className="d-flex w-100  carItem img-fluid"
+              src="https://nividous.com/wp-content/uploads/2022/05/how-automation-significantly-improves-patient-scheduling-nividous-1024x446.jpg"
+              alt="First slide"
             />
-            <Search color="info" style={{ margin: 4, fontSize: 32 }} />
-          </Box>
-        </div>
+
+            <Carousel.Caption className="caption">
+              <h3>View Doctors, Book an Appointment</h3>
+              <p>
+                Find the best doctors,clinics & hospitals in the nearest to you.
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={1000}>
+            <img
+              className="d-flex w-100 carItem"
+              src="https://t3.ftcdn.net/jpg/02/38/73/06/240_F_238730671_D7HoHQrLIJSJk5RpfrO8SWy29UGa2ER6.jpg"
+              alt="Second slide"
+            />
+
+            <Carousel.Caption className="caption">
+              <h3>View Doctors, Book an Appointment</h3>
+              <p>
+                Find the best doctors,clinics & hospitals in the nearest to you.
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={3000} className="vid">
+            <video width="100%" autoPlay className="carItem " loop>
+              <source src="/images/doctor3.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <Carousel.Caption className="caption">
+              <h3>View Doctors, Book an Appointment</h3>
+              <p>
+                Find the best doctors,clinics & hospitals in the nearest to you.
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+        <Container sx={{ marginTop: 10, marginBottom: 10 }}>
+          <Grid
+            container
+            spacing={2}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Grid item xs={12} md={4} sm={6}>
+              <Card className="cardStyle">
+                <Card.Img
+                  height={209}
+                  variant="top"
+                  src="https://talema.com/wp-content/uploads/blog/medical-device/medical-devices-hospital.jpg"
+                />
+                <Card.Body>
+                  <Card.Title>Medical Equipments</Card.Title>
+                  <Card.Text>
+                    Complete range of medical equipments and Laboratory
+                    services.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Grid>
+            <Grid item xs={12} md={4} sm={6}>
+              <Card className="cardStyle">
+                <Card.Img
+                  height={209}
+                  variant="top"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkUhbrk_SzWd9vwEKhOD6Is_Mb5FYSqxsXkA&usqp=CAU"
+                />
+                <Card.Body>
+                  <Card.Title>Doctor at home</Card.Title>
+                  <Card.Text>
+                    Video Consultation and Home visits are available on demand.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Grid>
+
+            <Grid item xs={12} md={4} sm={6}>
+              <Card className="cardStyle">
+                <Card.Img
+                  height={209}
+                  variant="top"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJlnjvsneaKVD4wb8YvXSopE463RDDBmFhcA&usqp=CAU"
+                />
+                <Card.Body>
+                  <Card.Title>ICU Facility</Card.Title>
+                  <Card.Text>
+                    With the capacity to provide ICU facilities and expert care.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Grid>
+          </Grid>
+        </Container>
       </div>
-      <Container
-        sx={{ marginTop: 10, marginBottom: 10, justifyContent: "center" }}
-      >
-        <Grid container spacing={2} sx={{ justifyContent: "center" }}>
-          <Grid item xs={12} md={4} sm={6}>
-            <Card style={{ width: "20rem" }}>
-              <Card.Img
-                height={209}
-                variant="top"
-                src="https://talema.com/wp-content/uploads/blog/medical-device/medical-devices-hospital.jpg"
-              />
-              <Card.Body>
-                <Card.Title>Medical Equipments</Card.Title>
-                <Card.Text>
-                  Complete range of medical equipments and Laboratory services.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={4} sm={6}>
-            <Card style={{ width: "20rem" }}>
-              <Card.Img
-                height={209}
-                variant="top"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkUhbrk_SzWd9vwEKhOD6Is_Mb5FYSqxsXkA&usqp=CAU"
-              />
-              <Card.Body>
-                <Card.Title>Doctor at home</Card.Title>
-                <Card.Text>
-                  Video Consultation and Home visits are available on demand.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Grid>
-
-          <Grid item xs={12} md={4} sm={6}>
-            <Card style={{ width: "20rem" }}>
-              <Card.Img
-                height={209}
-                variant="top"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJlnjvsneaKVD4wb8YvXSopE463RDDBmFhcA&usqp=CAU"
-              />
-              <Card.Body>
-                <Card.Title>ICU Facility</Card.Title>
-                <Card.Text>
-                  With the capacity to provide ICU facilities and expert care.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Grid>
-        </Grid>
-      </Container>
+      <Footer />
       <Divider />
-      <Box sx={{ marginTop: 5, textAlign: "center" }}>
-        <Typography variant="h4">Specialties</Typography>
-        <Typography variant="subtitle1">
-          Find the right provider for you.
-        </Typography>
-      </Box>
-      <Container
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Grid container spacing={2} sx={{ alignItems: "center" }}>
-          <Grid item xs={12} md={4} sm={6}>
-            <Box
-              sx={{
-                p: 2,
-
-                gap: 2,
-              }}
-            >
-              <Item elevation={2}>
-                <Link
-                  to={"/Allergists/Immunologists"}
-                  style={{ textDecoration: "none" }}
-                >
-                  Allergists/Immunologists
-                </Link>
-              </Item>
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={4} sm={6}>
-            <Box
-              sx={{
-                p: 2,
-
-                gap: 2,
-              }}
-            >
-              <Item elevation={2}>
-                <Link
-                  to={"/Anesthesiologists"}
-                  style={{ textDecoration: "none" }}
-                >
-                  Anesthesiologists
-                </Link>
-              </Item>
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} md={4} sm={6}>
-            <Box
-              sx={{
-                p: 2,
-
-                gap: 2,
-              }}
-            >
-              <Item elevation={2}>
-                <Link to={"/Cardiologists"} style={{ textDecoration: "none" }}>
-                  Cardiologists
-                </Link>
-              </Item>
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} md={4} sm={6}>
-            <Box
-              sx={{
-                p: 2,
-
-                gap: 2,
-              }}
-            >
-              <Item elevation={2}>
-                <Link
-                  to={"/NeurologicalSurgeon"}
-                  style={{ textDecoration: "none" }}
-                >
-                  Neurological Surgeon
-                </Link>
-              </Item>
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} md={4} sm={6}>
-            <Box
-              sx={{
-                p: 2,
-
-                gap: 2,
-              }}
-            >
-              <Item elevation={2}>
-                <Link to={"/Dermatologist"} style={{ textDecoration: "none" }}>
-                  Dermatologists
-                </Link>
-              </Item>
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} md={4} sm={6}>
-            <Box
-              sx={{
-                p: 2,
-
-                gap: 2,
-              }}
-            >
-              <Item elevation={2}>
-                <Link
-                  to={"/Emergency Medicine"}
-                  style={{ textDecoration: "none" }}
-                >
-                  Emergency Medicine
-                </Link>
-              </Item>
-            </Box>
-          </Grid>
-
-          {/* footer */}
-        </Grid>
-      </Container>{" "}
     </>
   );
 };
