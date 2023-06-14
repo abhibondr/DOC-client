@@ -13,5 +13,8 @@ export default {
       validateToken: "/auth/validate-token",
       resetPassword: "/auth/reset-password",
     },
+    admin: {
+      getAllDoctors: "/admin/getAllDoctors",
+    },
   },
 };
