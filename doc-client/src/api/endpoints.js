@@ -13,12 +13,15 @@ export default {
       validateToken: "/auth/validate-token",
       resetPassword: "/auth/reset-password",
     },
-    query: {
-      create: "/query",
-      update: "/query/",
-      delete: "/query/",
-      getOne: "/query/",
-      getAll: "/query",
+    admin: {
+      getAllDoctors: "/admin/getAllDoctors",
+      query: {
+        create: "/query",
+        update: "/query/",
+        delete: "/query/",
+        getOne: "/query/",
+        getAll: "/query",
+      },
     },
   },
 };
