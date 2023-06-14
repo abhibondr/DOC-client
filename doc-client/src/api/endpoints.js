@@ -15,13 +15,13 @@ export default {
     },
     admin: {
       getAllDoctors: "/admin/getAllDoctors",
-      query: {
-        create: "/query",
-        update: "/query/",
-        delete: "/query/",
-        getOne: "/query/",
-        getAll: "/query",
-      },
+    },
+    query: {
+      create: "/query",
+      update: "/query/",
+      delete: "/query/",
+      getOne: "/query/",
+      getAll: "/query",
     },
   },
 };
