@@ -32,9 +32,10 @@ const HomePage = () => {
             />
 
             <Carousel.Caption className="caption">
-              <h3>View Doctors, Book an Appointment</h3>
+              <h3>Consult Top Doctors</h3>
               <p>
-                Find the best doctors,clinics & hospitals in the nearest to you.
+                Connect instantly with a 24x7 specialist visit a particular
+                doctor.
               </p>
             </Carousel.Caption>
           </Carousel.Item>
@@ -45,10 +46,8 @@ const HomePage = () => {
             </video>
 
             <Carousel.Caption className="caption">
-              <h3>View Doctors, Book an Appointment</h3>
-              <p>
-                Find the best doctors,clinics & hospitals in the nearest to you.
-              </p>
+              <h3>Instant appointment with doctors.</h3>
+              <p>Guaranteed. 100,000 Verified doctors</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
