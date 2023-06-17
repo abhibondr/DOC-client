@@ -22,7 +22,7 @@ const ContactPage = () => {
     QueryService.createUser(query)
       .then((response) => {
         dispatch(addUser(response?.data));
-        successToast("Send the query...");
+        successToast("Sent the Message...");
         console.log(response?.data);
       })
       .catch((err) => {
@@ -34,7 +34,6 @@ const ContactPage = () => {
     <div className="row bg">
       <div className="col-12 col-md-6">
         <form>
-          <h3>CONTACT US</h3>
           <h1>
             Always connect <span>with us</span>
           </h1>
@@ -54,7 +53,7 @@ const ContactPage = () => {
           <input
             type="number"
             name="mobile"
-            placeholder="+91"
+            placeholder="Enter your mobile number"
             onChange={handleChange}
           />
           <input

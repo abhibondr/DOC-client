@@ -168,6 +168,9 @@ const LoginPage = () => {
                   <Link href="/signup" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
+                  <Link href="/doctor-login" variant="body2" sx={{ ml: 2 }}>
+                    {"Login as Doctor"}
+                  </Link>
                 </Grid>
               </Grid>
               <Copyright sx={{ mt: 5 }} />
