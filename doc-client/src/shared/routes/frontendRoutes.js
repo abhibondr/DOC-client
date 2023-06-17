@@ -16,7 +16,13 @@ const TestimonialPage = lazy(() =>
 );
 const ContactPage = lazy(() => import("../../features/contact/ContactPage"));
 const LoginPage = lazy(() => import("../../features/login/LoginPage"));
+const DoctorLoginPage = lazy(() =>
+  import("../../features/login/DoctorLoginPage")
+);
 const SignUp = lazy(() => import("../../layouts/blank/SignUp"));
+const ApplyDoctor = lazy(() =>
+  import("../../features/private/apply-doctor/ApplyDoctor")
+);
 const ForgotPassword = lazy(() =>
   import("../../features/password/forgot-password/ForgotPassword")
 );
@@ -99,5 +105,22 @@ export default [
     showInMenu: false,
     hasChildren: false,
     path: "change-password/:token",
+  },
+
+  {
+    label: "Doctor Login",
+    component: <DoctorLoginPage />,
+    icon: <LoginIcon />,
+    showInMenu: false,
+    hasChildren: false,
+    path: "doctor-login",
+  },
+  {
+    label: "Apply Doctor",
+    component: <ApplyDoctor />,
+    icon: <SignUpIcon />,
+    showInMenu: false,
+    hasChildren: false,
+    path: "apply-doctor",
   },
 ];

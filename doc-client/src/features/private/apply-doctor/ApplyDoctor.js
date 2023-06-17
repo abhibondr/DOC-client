@@ -262,7 +262,7 @@ const RegisterForm = () => {
           </Button>
         </form>
         <small>
-          Already have an account? <Link to="/login">Login Here</Link>
+          Already have an account? <Link to="/doctor-login">Login Here</Link>
         </small>
       </Container>
     </>
