@@ -10,6 +10,7 @@ export default {
     },
     auth: {
       userLogin: "/auth/login",
+      doctorLogin: "/auth/doctorLogin",
       validateToken: "/auth/validate-token",
       resetPassword: "/auth/reset-password",
     },

@@ -11,13 +11,15 @@ const SideBarRoutes = () => {
       <Suspense fallback={<CircularProgress />}>
         <Routes>
           {Array.isArray(adminRoutes) &&
-            adminRoutes?.map(({ path, component, hasChildren }, i) => (
-              <Route
-                key={path + i}
-                path={hasChildren ? `${path}/*` : path}
-                element={component}
-              />
-            ))}
+            adminRoutes
+              ?.filter(({ showInMenu }) => showInMenu)
+              .map(({ path, component, hasChildren }, i) => (
+                <Route
+                  key={path + i}
+                  path={hasChildren ? `${path}/*` : path}
+                  element={component}
+                />
+              ))}
         </Routes>
       </Suspense>
     </>

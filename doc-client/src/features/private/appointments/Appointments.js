@@ -14,8 +14,8 @@ const Appointments = () => {
   }, []);
   const columns = [
     {
-      label: "ID",
-      name: "userId",
+      label: "Patient",
+      name: "userInfo",
       options: {
         sort: true,
         filter: false,
@@ -59,32 +59,10 @@ const Appointments = () => {
   ];
   return (
     <>
-      <div>
-        {/* <div>
-          <h2> {appointments && appointments.message}</h2>
-
-          <div>
-            {appointments &&
-              appointments.data.map((appointment, i) => (
-                <div key={i}>
-                  <h3> id: {appointment._id}</h3>
-                  <button
-                    onClick={() => console.log("appointment: ", appointment)}
-                  >
-                    getInfoappoint
-                  </button>
-                </div>
-              ))}
-          </div>
-        </div> */}
-      </div>
       <MuiDatatable
         title="Appointment List"
-        // data={customerList?.filter((u) => u?._id != loggedUser?._id)}
-        // data={customerList?.map((u, i) => u)}
         data={appointments}
         columns={columns}
-        // columns={appointments}
       />
     </>
   );
