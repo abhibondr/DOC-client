@@ -32,6 +32,7 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "",
+    roles: ["admin", "patient"],
   },
   {
     label: "Doctors",
@@ -40,6 +41,7 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "doctors",
+    roles: ["admin", "patient"],
   },
 
   {
@@ -49,6 +51,7 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "apply-doctor",
+    roles: ["admin"],
   },
 
   {
@@ -58,6 +61,7 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "patients",
+    roles: ["admin"],
   },
   {
     label: "Enquiry",
@@ -66,6 +70,7 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "enquiry",
+    roles: ["admin"],
   },
   {
     label: "Doctor Appointment",
@@ -74,11 +79,13 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "doctor-appointments",
+    roles: ["admin"],
   },
   {
     component: <BookAppointment />,
-    showInMenu: true,
+    showInMenu: false,
     hasChildren: false,
     path: "doctors/bookAppointment/:id",
+    roles: ["admin", "patient"],
   },
 ];
