@@ -27,26 +27,48 @@
 .col-md-4 {
   margin-top: 40px auto;
 }
+.cardholder {
+  margin-top: 50px;
+}
 .profile {
-  margin-top: 80px;
-  padding: 70px 10px 10px;
+  margin-top: 120px;
+  padding: 50px 10px 10px;
+  min-height: 410px;
+  position: relative;
   background-color: #efefef;
 }
 .profile img {
-  top: 290px;
   position: absolute;
-  left: calc(50% -60px);
+  top: -50px;
+  z-index: 3;
+  left: calc(50% + 90px);
   border: 10px solid white;
 }
+.custPro {
+  margin-top: 20px;
+  padding: 20px 20px 10px;
+  background-color: #efefef;
+  min-height: 300px;
+  position: relative;
+}
 .user {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  z-index: 4;
+  /* border: 2px solid rgb(85, 177, 234); */
 }
 .profile h3 {
   font-size: 20px;
   margin-top: 15px;
   color: rgb(0, 102, 255);
+}
+.custPro h3 {
+  font-size: 20px;
+  margin-top: 15px;
+  color: rgb(0, 102, 255);
+  position: fixed;
+  bottom: 20px;
 }
 span {
   font-size: 12px;
@@ -75,6 +97,11 @@ blockquote::after {
   left: 5px;
 }
 .profile:hover {
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.custPro:hover {
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: 0.5s;
