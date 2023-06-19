@@ -5,6 +5,10 @@ const AuthService = {
     return API.post(endpoints?.api?.auth?.userLogin, user);
   },
 
+  doctorLogin(user) {
+    return API.post(endpoints?.api?.auth?.doctorLogin, user);
+  },
+
   validateToken() {
     const token = sessionStorage.getItem("token");
 

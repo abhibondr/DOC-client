@@ -4,8 +4,12 @@ import MedicalInformationIcon from "@mui/icons-material/MedicalInformation";
 import MedicationLiquidIcon from "@mui/icons-material/MedicationLiquid";
 import AccessibleIcon from "@mui/icons-material/Accessible";
 import EnquiryIcon from "@mui/icons-material/EnergySavingsLeaf";
-
+import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import ApplyDoctorIcon from "@mui/icons-material/PersonAddAlt1";
+
+const DoctorAppointments = lazy(() =>
+  import("../../features/private/doctor-appointment/DoctorAppointments")
+);
 // import BookAppointment from "../../features/private/book-appointment/BookAppointment";
 const Appointments = lazy(() =>
   import("../../features/private/appointments/Appointments")
@@ -28,6 +32,7 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "",
+    roles: ["admin", "patient"],
   },
   {
     label: "Doctors",
@@ -36,6 +41,7 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "doctors",
+    roles: ["admin", "patient"],
   },
 
   {
@@ -45,6 +51,7 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "apply-doctor",
+    roles: ["admin"],
   },
 
   {
@@ -54,6 +61,7 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "patients",
+    roles: ["admin"],
   },
   {
     label: "Enquiry",
@@ -62,11 +70,22 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "enquiry",
+    roles: ["admin"],
+  },
+  {
+    label: "Doctor Appointment",
+    icon: <ManageAccountsIcon />,
+    component: <DoctorAppointments />,
+    showInMenu: true,
+    hasChildren: false,
+    path: "doctor-appointments",
+    roles: ["admin"],
   },
   {
     component: <BookAppointment />,
-    showInMenu: true,
+    showInMenu: false,
     hasChildren: false,
     path: "doctors/bookAppointment/:id",
+    roles: ["admin", "patient"],
   },
 ];
