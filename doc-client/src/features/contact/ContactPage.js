@@ -22,7 +22,7 @@ const ContactPage = () => {
     QueryService.createUser(query)
       .then((response) => {
         dispatch(addUser(response?.data));
-        successToast("Sent the Message...");
+        successToast("Message Sent...");
         console.log(response?.data);
       })
       .catch((err) => {
