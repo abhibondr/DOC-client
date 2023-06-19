@@ -14,7 +14,10 @@ const DoctorAppointments = () => {
       .get("http://localhost:9999/api/doctor/doctor-appointments")
       .then((response) => {
         console.log("appointments: ", response.data.data);
-        setAppointments(response.data.data);
+        const latestAppointment = response.data.data;
+        latestAppointment.reverse();
+        console.log("latestAppointment: ", latestAppointment);
+        setAppointments(latestAppointment);
       });
   }
 
