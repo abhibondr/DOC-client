@@ -45,8 +45,11 @@ const Doctors = () => {
                     Dr.{`${doctor.firstName} ${doctor.lastName}`}
                   </Typography>
                   <Divider />
-                  <Typography variant="h5">
+                  <Typography variant="h6">
                     Specialization: {`${doctor.specialization}`}
+                  </Typography>
+                  <Typography variant="h5">
+                    Qualifications: {`${doctor.qualifications}`}
                   </Typography>
                   <Typography sx={{ mb: 1.5 }} color="text.secondary">
                     Experience:{` ${doctor.experience}`}
