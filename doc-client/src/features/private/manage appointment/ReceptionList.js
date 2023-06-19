@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { TextField, Button, Container, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { errorToast, successToast } from "../../../ui/toast/Toast";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+import FormControl from "@mui/material/FormControl";
 
 const BookAppointmentByAdmin = () => {
-  // const [firstName, setFirstName] = useState("");
   const [userInfo, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address, setAddress] = useState("");
@@ -16,6 +19,13 @@ const BookAppointmentByAdmin = () => {
   const [time, setTime] = useState("");
   const [weight, setWeight] = useState();
   const [date, setdate] = useState();
+  const [doctors, setDoctors] = useState([]);
+  const [doctor, setDoctor] = useState();
+  const [doctorId, setdoctorId] = useState();
+  const handleChange = (event) => {
+    setdoctorId(event.target.value);
+    console.log(event.target.value);
+  };
 
   const navigate = useNavigate();
   const resetInputs = () => {
@@ -29,6 +39,7 @@ const BookAppointmentByAdmin = () => {
     setWeight("");
     setAge("");
     setdate("");
+    setdoctorId("");
   };
 
   const BookAppointmentHandle = async (e) => {
@@ -45,6 +56,7 @@ const BookAppointmentByAdmin = () => {
       feesPerCunsaltation,
       weight,
       date,
+      doctorId,
     };
 
     await axios
@@ -52,17 +64,28 @@ const BookAppointmentByAdmin = () => {
       .then((response) => {
         successToast("appointment is booked ");
         console.log(response.data);
-        // resetInputs();
+        resetInputs();
         navigate("/secured");
       })
       .catch((err) => {
         console.log(err);
         errorToast("appointment is not booked ");
-        // resetInputs();
+        resetInputs();
       });
 
     console.log("formdata: ", formData);
   };
+  useEffect(() => {
+    axios
+      .get("http://localhost:9999/api/admin/getAllDoctors")
+      .then((response) => {
+        console.log("response data: ", response.data.data);
+        setDoctors(response.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <>
@@ -79,7 +102,6 @@ const BookAppointmentByAdmin = () => {
         }}
       >
         <form onSubmit={BookAppointmentHandle}>
-          {/* {/ <Stack spacing={2} direction="row" sx={{ marginBottom: 4 }}>  /} */}
           <h3> Personal Details</h3>
 
           <Grid container spacing={2}>
@@ -164,16 +186,29 @@ const BookAppointmentByAdmin = () => {
 
           <Grid container spacing={2}>
             <Grid item xs={12} sm={12} md={12} sx={{ mb: 2 }}>
-              <TextField
-                type="text"
-                variant="outlined"
-                color="secondary"
-                label="Name"
-                onChange={(e) => setName(e.target.value)}
-                value={doctorInfo}
-                fullWidth
-                required
-              />
+              <FormControl sx={{ m: 1, width: 550 }} size="medium">
+                <InputLabel id="demo-select-small-label">Name</InputLabel>
+                <Select
+                  labelId="demo-select-small-label"
+                  id="demo-select-small"
+                  value={doctor}
+                  label="Age"
+                  onChange={handleChange}
+                >
+                  {Array.isArray(doctors) &&
+                    doctors.map((doctor, id) => (
+                      <MenuItem
+                        key={id}
+                        value={doctor._id}
+                        onClick={() =>
+                          setName(doctor.firstName + " " + doctor.lastName)
+                        }
+                      >
+                        {doctor.firstName} {doctor.lastName}
+                      </MenuItem>
+                    ))}
+                </Select>
+              </FormControl>
             </Grid>
 
             <Grid item xs={12} sm={12} md={12} sx={{ mb: 2 }}>
@@ -197,11 +232,7 @@ const BookAppointmentByAdmin = () => {
                 color="secondary"
                 label="date"
                 InputLabelProps={{ shrink: true }}
-                // onChange={(e) => setDate(e.target.value)}
-                onChange={(e) =>
-                  // setDate(moment(e.target.value).format("YYYY-MM-DD"))
-                  setdate(e.target.value)
-                }
+                onChange={(e) => setdate(e.target.value)}
                 value={date}
                 fullWidth
                 required

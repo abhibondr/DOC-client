@@ -89,6 +89,7 @@ export default [
     showInMenu: true,
     hasChildren: false,
     path: "doctors/bookappointment-patient",
+    roles: ["admin"],
   },
 
   {
