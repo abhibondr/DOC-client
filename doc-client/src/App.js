@@ -9,7 +9,8 @@ import { removeUser, selectAuth } from "./app/slice/AuthSlice";
 import { Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import AuthService from "./services/AuthService";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function App() {
   const dispatch = useDispatch();
   const navigate = useNavigate();

@@ -41,7 +41,7 @@ function Copyright(props) {
 
 const defaultTheme = createTheme();
 
-const LoginPage = () => {
+const DoctorloginPage = () => {
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
@@ -59,7 +59,7 @@ const LoginPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    AuthService.userLogin(user)
+    AuthService.doctorLogin(user)
       .then((response) => {
         console.log("Response", response);
 
@@ -92,7 +92,7 @@ const LoginPage = () => {
           md={7}
           sx={{
             backgroundImage:
-              "url(https://as2.ftcdn.net/v2/jpg/02/65/95/81/1000_F_265958166_YTEL6wHpfxnPlN9nNYxL7UKHiOWCln59.jpg)",
+              "url(https://i.pinimg.com/originals/fc/76/db/fc76dbac67ad124a61635d5360feba54.jpg)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
@@ -165,11 +165,11 @@ const LoginPage = () => {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="/signup" variant="body2">
+                  <Link href="/apply-doctor" variant="body2" sx={{ mr: 2 }}>
                     {"Don't have an account? Sign Up"}
                   </Link>
-                  <Link href="/doctor-login" variant="body2" sx={{ ml: 2 }}>
-                    {"Login as Doctor"}
+                  <Link href="/login" variant="body2">
+                    {"Login Page"}
                   </Link>
                 </Grid>
               </Grid>
@@ -182,4 +182,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default DoctorloginPage;

@@ -16,12 +16,25 @@
 .carItem {
   height: 90vh !important;
 }
+@media only screen and (max-width: 600px) {
+  .carItem {
+    /* height: auto !important; */
+    min-height: 65vw;
+    max-height: 65vw;
+  }
+}
 .caption {
   position: absolute;
   top: 200px;
   left: -200px;
   color: #222;
   font-size: large;
+  /* display: none; */
+}
+@media only screen and (max-width: 600px) {
+  .caption {
+    display: none;
+  }
 }
 .caption h3 {
   font: 900 !important;

@@ -26,9 +26,10 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { removeUser } from "../../app/slice/AuthSlice";
+import { removeUser, selectAuth } from "../../app/slice/AuthSlice";
 import SideBarMenu from "./SideBarMenu";
 import SideBarRoutes from "./SideBarRoutes";
+import { useSelector } from "react-redux";
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -99,6 +100,9 @@ const Drawer = styled(MuiDrawer, {
 const SideBar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const user = useSelector(selectAuth);
+  const name = user.name;
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -263,7 +267,7 @@ const SideBar = () => {
               aria-label="show 4 new mails"
               color="inherit"
             >
-              <Badge badgeContent={4} color="error">
+              <Badge badgeContent={0} color="error">
                 <MailIcon />
               </Badge>
             </IconButton>
@@ -272,7 +276,7 @@ const SideBar = () => {
               aria-label="show 17 new notifications"
               color="inherit"
             >
-              <Badge badgeContent={17} color="error">
+              <Badge badgeContent={0} color="error">
                 <NotificationsIcon />
               </Badge>
             </IconButton>
@@ -286,6 +290,7 @@ const SideBar = () => {
               color="inherit"
             >
               <AccountCircle />
+              {/* {name.first} */}
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>

@@ -13,6 +13,7 @@ const RegisterForm = () => {
   const [phone, setPhone] = useState("");
   const [website, setWebsite] = useState("");
   const [specialization, setSpecialization] = useState("");
+  const [qualifications, setQualifications] = useState("");
   const [experience, setExperience] = useState("");
   const [feesPerCunsaltation, setFeesconsaltation] = useState("");
   const [timings, setTimings] = useState({
@@ -27,6 +28,7 @@ const RegisterForm = () => {
     setLastName("");
     setAddress("");
     setSpecialization("");
+    setQualifications("");
     setPhone("");
     setFeesconsaltation("");
     setExperience("");
@@ -44,6 +46,7 @@ const RegisterForm = () => {
       password,
       address,
       specialization,
+      qualifications,
       experience,
       timings,
       phone,
@@ -67,7 +70,7 @@ const RegisterForm = () => {
 
   return (
     <>
-      <h2 style={{ textAlign: "center" }}>Apply Doctor</h2>
+      <h2 style={{ textAlign: "center", my: 2 }}>Apply Doctor</h2>
       <Container
         sx={{
           maxWidth: 500,
@@ -76,7 +79,7 @@ const RegisterForm = () => {
 
           border: "1px solid #c6ccc8",
           borderRadius: 2,
-          p: 5,
+          p: 2,
         }}
       >
         <form onSubmit={handleSubmit} action={<Link to="/login" />}>
@@ -178,9 +181,9 @@ const RegisterForm = () => {
                 type="text"
                 variant="outlined"
                 color="secondary"
-                label="specialization"
-                onChange={(e) => setSpecialization(e.target.value)}
-                value={specialization}
+                label="Qualifications"
+                onChange={(e) => setQualifications(e.target.value)}
+                value={qualifications}
                 fullWidth
                 required
               />
@@ -211,11 +214,23 @@ const RegisterForm = () => {
                 required
               />
             </Grid>
+            <Grid item xs={12} sm={6} md={6} sx={{ mb: 2 }}>
+              <TextField
+                type="text"
+                variant="outlined"
+                color="secondary"
+                label="Specialization"
+                onChange={(e) => setSpecialization(e.target.value)}
+                value={specialization}
+                fullWidth
+                required
+              />
+            </Grid>
+
             <br />
 
             <Grid item xs={12} md={12}>
               <Typography variant="h6" textAlign={"center"} color={"GrayText"}>
-                {" "}
                 Timings
               </Typography>
             </Grid>
@@ -262,7 +277,7 @@ const RegisterForm = () => {
           </Button>
         </form>
         <small>
-          Already have an account? <Link to="/login">Login Here</Link>
+          Already have an account? <Link to="/doctor-login">Login Here</Link>
         </small>
       </Container>
     </>
