@@ -5,13 +5,17 @@ import axios from "axios";
 import MUIDataTable from "mui-datatables";
 import React, { useEffect, useState } from "react";
 import { errorToast, successToast } from "../../../ui/toast/Toast";
+import { useSelector } from "react-redux";
+import { selectAuth } from "../../../app/slice/AuthSlice";
 
 const DoctorAppointments = () => {
   const [appointments, setAppointments] = useState([]);
 
+  const user = useSelector(selectAuth);
+  const id = user._id;
   async function fetchdata() {
     await axios
-      .get("http://localhost:9999/api/doctor/doctor-appointments")
+      .get(`http://localhost:9999/api/doctor/doctor-appointments/${id}`)
       .then((response) => {
         console.log("appointments: ", response.data.data);
         const latestAppointment = response.data.data;
