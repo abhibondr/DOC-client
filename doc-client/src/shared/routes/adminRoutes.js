@@ -6,7 +6,8 @@ import AccessibleIcon from "@mui/icons-material/Accessible";
 import EnquiryIcon from "@mui/icons-material/EnergySavingsLeaf";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import ApplyDoctorIcon from "@mui/icons-material/PersonAddAlt1";
-
+import BookAppointmentByAdmin from "../../features/private/manage appointment/ReceptionList";
+import BookIcon from "@mui/icons-material/NoteAdd";
 const DoctorAppointments = lazy(() =>
   import("../../features/private/doctor-appointment/DoctorAppointments")
 );
@@ -81,6 +82,16 @@ export default [
     path: "doctor-appointments",
     roles: ["admin"],
   },
+  {
+    label: "bookappointment-patient",
+    icon: <BookIcon />,
+    component: <BookAppointmentByAdmin />,
+    showInMenu: true,
+    hasChildren: false,
+    path: "doctors/bookappointment-patient",
+    roles: ["admin"],
+  },
+
   {
     component: <BookAppointment />,
     showInMenu: false,
