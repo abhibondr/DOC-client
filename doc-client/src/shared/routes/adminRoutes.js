@@ -89,3 +89,4 @@ export default [
     roles: ["admin", "patient"],
   },
 ];
+
