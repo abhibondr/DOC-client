@@ -83,7 +83,7 @@ export default [
     roles: ["admin"],
   },
   {
-    label: "bookappointment-patient",
+    label: "Receptionist",
     icon: <BookIcon />,
     component: <BookAppointmentByAdmin />,
     showInMenu: true,
