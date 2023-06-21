@@ -84,12 +84,11 @@ const UserForm = () => {
           errorToast("User Not Updated");
         });
     } else {
-      UserService.createUser(fd)
+      UserService.createUser(user)
         .then((response) => {
           dispatch(addUser(response?.data));
           successToast("User Created...");
           handleClose();
-          navigate("/login");
           console.log(response?.data);
         })
         .catch((err) => {
