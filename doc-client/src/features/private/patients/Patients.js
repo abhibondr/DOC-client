@@ -20,7 +20,9 @@ const Patients = () => {
 
   const LoadUser = async () => {
     const res = await UserService.getAllUsers();
-    if (res?.data?.data) setUserlist(res?.data?.data);
+    const latestUser = res?.data?.data;
+    latestUser.reverse();
+    setUserlist(latestUser);
   };
 
   useEffect(() => {

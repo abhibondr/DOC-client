@@ -24,5 +24,12 @@ export default {
       getOne: "/query/",
       getAll: "/query",
     },
+    feedback: {
+      create: "/feedback",
+      update: "/feedback/",
+      delete: "/feedback/",
+      getOne: "/feedback/",
+      getAll: "/feedback",
+    },
   },
 };
