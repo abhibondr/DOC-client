@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import MuiDatatable, { MUIDataTableColumn } from "mui-datatables";
 import axios from "axios";
+import { useSelector } from "react-redux";
+import { selectAuth } from "../../../app/slice/AuthSlice";
 const Appointments = () => {
   const [appointments, setAppointments] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:9999/api/doctor/user-appointments")
+  const user = useSelector(selectAuth);
+  const id = user._id;
+  async function appointmentData() {
+    await axios
+      .get(`http://localhost:9999/api/doctor/user-appointments/${id}`)
       .then((response) => {
         console.log("appointments: ", response.data.data);
         const latestAppointment = response.data.data;
@@ -14,7 +18,12 @@ const Appointments = () => {
         console.log("latestAppointment: ", latestAppointment);
         setAppointments(latestAppointment);
       });
+  }
+
+  useEffect(() => {
+    appointmentData();
   }, []);
+
   const columns = [
     {
       label: "Patient",

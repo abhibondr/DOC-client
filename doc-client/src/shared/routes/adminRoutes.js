@@ -8,6 +8,7 @@ import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import ApplyDoctorIcon from "@mui/icons-material/PersonAddAlt1";
 import BookAppointmentByAdmin from "../../features/private/manage appointment/ReceptionList";
 import BookIcon from "@mui/icons-material/NoteAdd";
+import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
 const DoctorAppointments = lazy(() =>
   import("../../features/private/doctor-appointment/DoctorAppointments")
 );
@@ -20,6 +21,13 @@ const Patients = lazy(() => import("../../features/private/patients/Patients"));
 const Enquiry = lazy(() => import("../../features/private/enquiry/Enquiry"));
 const ApplyDoctor = lazy(() =>
   import("../../features/private/apply-doctor/ApplyDoctor")
+);
+const FeedbackForm = lazy(() =>
+  import("../../features/private/feedback/Feedback")
+);
+
+const FeedbackCollection = lazy(() =>
+  import("../../features/private/feedback-collection/FeedbackCollection")
 );
 
 const BookAppointment = lazy(() =>
@@ -83,7 +91,7 @@ export default [
     roles: ["admin"],
   },
   {
-    label: "bookappointment-patient",
+    label: "Receptionist",
     icon: <BookIcon />,
     component: <BookAppointmentByAdmin />,
     showInMenu: true,
@@ -98,6 +106,24 @@ export default [
     hasChildren: false,
     path: "doctors/bookAppointment/:id",
     roles: ["admin", "patient"],
+  },
+  {
+    label: "Feedback",
+    component: <FeedbackForm />,
+    icon: <ChatOutlinedIcon />,
+    showInMenu: true,
+    hasChildren: false,
+    path: "patients-feedback",
+    roles: ["patient"],
+  },
+  {
+    label: "Feedback-store",
+    component: <FeedbackCollection />,
+    icon: <ChatOutlinedIcon />,
+    showInMenu: true,
+    hasChildren: false,
+    path: "feedback-store",
+    roles: ["admin"],
   },
 ];
 
